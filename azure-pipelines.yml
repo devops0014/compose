@@ -10,10 +10,11 @@ pool:
   name: new-pool
 
 steps:
-- script: echo Hello, world!
+- script: echo Welcome to my Pipeline
   displayName: 'STAGE-1'
 
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
+- script: echo this is second stage
   displayName: 'STAGE-2'
+
+- script: echo this is third stage
+  displayName: 'stage-3'
