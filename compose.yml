@@ -1,0 +1,43 @@
+---
+services:
+  bus:
+    image: shaikmustafa/girish:bus
+    ports:
+      - "9999:80"
+    deploy:
+      replicas: 3
+      resources:
+        reservations:
+          cpus: "0.5"
+          memory: 10M
+        limits:
+          cpus: "1.0"
+          memory: 20M
+
+  movie:
+    image: shaikmustafa/girish:movie
+    ports:
+      - "8888:80"
+    deploy:
+      replicas: 3
+      resources:
+        reservations:
+          cpus: "0.5"
+          memory: 10M
+        limits:
+          cpus: "1.0"
+          memory: 20M
+
+  train:
+    image: shaikmustafa/girish:train
+    ports:
+      - "7777:80"
+    deploy:
+      replicas: 3
+      resources:
+        reservations:
+          cpus: "0.5"
+          memory: 10M
+        limits:
+          cpus: "1.0"
+          memory: 20M
